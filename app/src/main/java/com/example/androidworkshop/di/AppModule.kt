@@ -13,7 +13,7 @@ val appModule = module{
 
     single{ Room.databaseBuilder(get(), AppDatabase::class.java, DATABASE).build() }
 
-//    single{ get<AppDatabase>().itemDao() }
+    single{ get<AppDatabase>().itemDao() }
 
     single<ItemsRepository> { ItemsRepositoryImpl(get()) }
 

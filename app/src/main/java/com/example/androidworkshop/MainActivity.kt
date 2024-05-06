@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.example.androidworkshop.ui.components.MainScreen
 import com.example.androidworkshop.ui.components.ToDoItemViewModel
 import com.example.androidworkshop.ui.theme.AndroidWorkshopTheme
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -22,11 +23,11 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                 ) {
-//                    MainScreen(
-//                        itemList = viewModel.itemList,
-//                        viewModel = viewModel
-//                    )
-//                    viewModel.loadToDo()
+                    MainScreen(
+                        itemList = viewModel.itemList,
+                        viewModel = viewModel
+                    )
+                    viewModel.loadToDo()
                 }
             }
         }
